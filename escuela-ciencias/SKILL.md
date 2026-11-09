@@ -16,7 +16,7 @@ El usuario es un estudiante de secundaria que escribe en español informal. Resp
 
 ## Principios (por qué importan)
 
-- **Fidelidad a las fuentes.** El estudiante necesita saber qué viene de su clase, porque eso es lo que le van a preguntar. Mientras no lo autorice, usa solo lo que dicen sus materiales. Cuando agregues algo de fuera, márcalo siempre como **Externo** 🔶. Etiqueta el origen de cada dato: 🎥 Video · 📊 PPT · ✍️ Apuntes · 🔶 Externo.
+- **Fidelidad a las fuentes.** El estudiante necesita saber qué viene de su clase, porque eso es lo que le van a preguntar. Mientras no lo autorice, usa solo lo que dicen sus materiales. Cuando agregues algo de fuera, márcalo siempre como **Externo** 🔶. Etiqueta el origen de cada dato: 🎥 Video · 📊 PPT · ✍️ Apuntes · 📝 Examen (visto en exámenes anteriores) · 🔶 Externo.
 - **No omitir nada.** El usuario lo pidió de forma explícita: todo lo que dicen sus materiales debe aparecer en algún lado (cifras, nombres, ejemplos, pasos del PPT, notas al margen). Antes de dar algo por terminado, revisa fuente por fuente que nada se quedó fuera.
 - **Cada componente explica "qué es" y "qué hace".** Una definición sin función no le sirvió al usuario y lo dijo. Agrega también "qué hace en esta parte" cuando el componente actúa distinto según la etapa.
 - **No inventar para tapar huecos.** Si a la transcripción le falta un tramo, dilo, con los minutos. Pide que el usuario lo escuche, o completa con información externa marcada. Si una herramienta no puede acceder a algo (YouTube, Vercel), dilo y da los pasos para que lo haga el usuario.
@@ -49,7 +49,7 @@ Detalles en `references/fuentes.md`.
 
 ### Fase 3: Construir la app de estudio
 
-Antes de construir, propone la estructura y pregunta lo esencial: qué contenido entra, cómo quiere el examen, cómo se corrigen las preguntas abiertas y en qué dispositivo la usará. Si el usuario manda **exámenes viejos de la profesora**, úsalos solo como **referencia de formato** (tipos de parte, puntajes, estilo de preguntas), no de contenido, salvo que diga lo contrario. Analiza también en qué falló el estudiante (por ejemplo, preguntas de aplicar vs. de memoria) para reforzar eso.
+Antes de construir, propone la estructura y pregunta lo esencial: qué contenido entra, cómo quiere el examen, cómo se corrigen las preguntas abiertas y en qué dispositivo la usará. Si el usuario manda **exámenes viejos**, úsalos como **referencia de formato** (tipos de parte, puntajes, estilo de preguntas). Si son del mismo tema, úsalos también como **fuente de contenido** con la etiqueta "Examen" (preguntas, datos nuevos, y qué marcó mal la profesora). En la app, nombra los formatos "Examen 1", "Examen 2"…, nunca "como la profesora", "bimestral" ni "parcial del año pasado". Analiza también en qué falló el estudiante (por ejemplo, preguntas de aplicar vs. de memoria) para reforzar eso.
 
 Parte de la app de ejemplo `assets/ejemplo-transcripcion.html`. Su motor es reutilizable y solo cambian los datos del tema. Lee `references/app-arquitectura.md` para saber qué reemplazar y qué conservar. La app tiene estas secciones:
 
@@ -58,7 +58,7 @@ Parte de la app de ejemplo `assets/ejemplo-transcripcion.html`. Su motor es reut
 | **Proceso** | Animación **continua** del proceso dividida en partes, como si se viera en persona: play/pausa, línea de tiempo, saltar entre partes, "pausar al final de cada parte", velocidad, subtítulos que narran y atajos de teclado. Cada estructura es **clicable** y muestra qué es, qué hace y qué hace en esta parte. Incluye el modo **"Ponme a prueba"** (señalar estructuras sin etiquetas). |
 | **Leer todo** | Toda la información en una página: resumen de una línea por parte, cada parte con una imagen fija, explicación y componentes desplegados, glosario A–Z, buscador, índice fijo, botón "Ver esta parte en la animación" e impresión a PDF (solo fuera de claude.ai). |
 | **Lo general** | Tarjetas con lo transversal: definición, tipos, características, comparaciones (por ejemplo eucariota vs. procariota), errores comunes y "términos de tus apuntes". |
-| **Examen** | **Configurable**: como la profesora, solo selección única, solo completar, solo pareo, combinar algunos o combinar todos; largo corto, normal o largo. El total se calcula según lo elegido. Correcciones con explicación y enlace a la parte de la animación. |
+| **Examen** | **Configurable**: Examen 1, Examen 2… (uno por cada formato real que mande el usuario), solo selección única, solo completar, solo pareo, combinar algunos o combinar todos; largo corto, normal o largo. El total se calcula según lo elegido. Correcciones con explicación y enlace a la parte de la animación. |
 | **Práctica** | 8 preguntas por tema con respuesta al momento y "Repasar mis errores" (guardado en el navegador). |
 
 Diseño que el usuario pidió y aprobó:
@@ -67,7 +67,7 @@ Diseño que el usuario pidió y aprobó:
 - **Fondo animado** temático en canvas (en el ejemplo: hélices de ADN en 3D, letras de nucleótidos flotando y luces suaves). Las tarjetas son translúcidas para que el fondo se vea. Respeta `prefers-reduced-motion`.
 - La animación debe verse **natural**: objetos que llegan, se mueven, se doblan y se separan con suavidad. Nada de diapositivas que cambian de golpe.
 
-Banco de preguntas: apunta a ≥50 de selección única, ≥35 de completar, ≥30 pares para pareo, ≥6 casos de desarrollo y ≥2 análisis de imágenes. Mezcla preguntas de memoria con **casos de aplicación** ("si una mutación impide X, ¿qué pasa?"). Formato de las partes: `references/examen-formato.md`.
+Banco de preguntas: apunta a ≥60 de selección única, ≥40 de completar, ≥45 pares para pareo (los términos pueden repetirse), ≥6 casos de desarrollo y ≥2 análisis de imágenes. Mezcla preguntas de memoria con **casos de aplicación** ("si una mutación impide X, ¿qué pasa?"). Formato de las partes: `references/examen-formato.md`.
 
 Antes de entregar:
 - Revisa la sintaxis del script con `node --check`.
