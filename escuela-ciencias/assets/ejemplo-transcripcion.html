@@ -1222,15 +1222,15 @@ function renderSetup(){
   ${exCfg.preset==='some'?`<div class="chips sub"><span class="muted">Elige las partes:</span>${TYPES.map(([k,n])=>`<label class="chk"><input type="checkbox" data-type="${k}" ${exCfg.some.includes(k)?'checked':''}> ${n}</label>`).join('')}</div>`:''}
   ${fx?'':`<div class="chips sub"><span class="muted">Largo:</span>${[['corto','Corto'],['normal','Normal'],['largo','Largo']].map(([k,n])=>`<button type="button" class="chip ${exCfg.len===k?'on':''}" data-len="${k}">${n}</button>`).join('')}</div>`}
   <p class="muted" style="margin:12px 0 0">Tendrá: ${plan.map(([k,v],i)=>`${ROM[i]}. ${TYPES.find(t=>t[0]===k)[1]} (${fmt(v)} pts)`).join(' · ')} — <b>total ${fmt(tot)} puntos</b>.</p>
-  <div class="row" style="margin-top:12px"><button class="btn pri" type="button" id="mkExam">Crear examen</button></div></div>`;
+  <div class="row" style="margin-top:12px"><button class="btn pri" type="button" id="mkExam">↻ Otras preguntas con este formato</button><span class="muted">El examen de abajo cambia en cuanto eliges una opción.</span></div></div>`;
 }
 $('#exSetup').addEventListener('click',e=>{
- const pr=e.target.closest('[data-preset]');if(pr){exCfg.preset=pr.dataset.preset;store.set('tx-excfg',exCfg);renderSetup();return}
- const ln=e.target.closest('[data-len]');if(ln){exCfg.len=ln.dataset.len;store.set('tx-excfg',exCfg);renderSetup();return}
+ const pr=e.target.closest('[data-preset]');if(pr){exCfg.preset=pr.dataset.preset;store.set('tx-excfg',exCfg);renderSetup();newExam();return}
+ const ln=e.target.closest('[data-len]');if(ln){exCfg.len=ln.dataset.len;store.set('tx-excfg',exCfg);renderSetup();newExam();return}
  if(e.target.closest('#mkExam')){newExam();$('#paper').scrollIntoView({behavior:'smooth',block:'start'})}
 });
 $('#exSetup').addEventListener('change',e=>{const c=e.target.closest('[data-type]');if(!c)return;const k=c.dataset.type;
- exCfg.some=c.checked?[...new Set([...exCfg.some,k])]:exCfg.some.filter(x=>x!==k);store.set('tx-excfg',exCfg);renderSetup();});
+ exCfg.some=c.checked?[...new Set([...exCfg.some,k])]:exCfg.some.filter(x=>x!==k);store.set('tx-excfg',exCfg);renderSetup();newExam();});
 
 function pickPareo(n){const out=[],seen=new Set();for(const pp of shuffle(PAREO)){if(seen.has(pp[1]))continue;seen.add(pp[1]);out.push(pp);if(out.length>=n)break}return out}
 function newExam(){
@@ -1284,7 +1284,7 @@ function renderExam(){
  ${E.casos.map((c,k)=>`<div class="case">${E.casos.length>1?`<b>${k+1}.</b> `:''}${esc(c.q)} <span class="muted">(5 puntos)</span></div><textarea id="casoAns_${k}" aria-label="Respuesta de desarrollo ${k+1}"></textarea><div id="casoFb_${k}"></div>`).join('')}`
  };
  let h=`<div class="paper" id="paperIn">
- <div class="ph"><h3>Prueba de Biología · Transcripción del ADN</h3><b>Vale ${fmt(E.total)} puntos</b></div>
+ <div class="ph"><h3>Prueba de Biología · Transcripción del ADN <span class="pill e" style="vertical-align:middle">${esc((PRESETS.find(x=>x[0]===exCfg.preset)||PRESETS[0])[1])}</span></h3><b>Vale ${fmt(E.total)} puntos</b></div>
  <p class="ind">Indicaciones generales: lea cuidadosamente la prueba antes de contestar.${E.mc?' En la selección única, la letra que elija aparecerá en la casilla de la izquierda.':''}</p>`;
  h+=E.types.map(k=>R[k]()).join('');
  h+=`<div class="submit"><button class="btn pri" id="submitEx" type="button">Entregar examen</button></div></div>`;
