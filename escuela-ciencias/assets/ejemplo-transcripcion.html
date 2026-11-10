@@ -792,6 +792,9 @@ function renderAt(T,opt){
   out.push(H('codificante',`<path d="${dC}" ${st(null,'transparent',16)}/><path d="${dC}" ${st(null,'var(--dna)',6,'stroke-linecap:round')}/>`));
   out.push(H('molde',`<path d="${dT}" ${st(null,'transparent',16)}/><path d="${dT}" ${st(null,'var(--tmpl)',6,'stroke-linecap:round')}/>`));
   A(994,327,'3′','middle','an',true);A(994,357,'5′','middle','an',true);
+  {let c='';[470,620,770,920].filter(x=>!(bub&&Math.abs(x-bx)<95)).forEach(x=>{c+=`M${x-5},317 L${x+3},322 L${x-5},327 M${x+5},347 L${x-3},352 L${x+5},357 `});if(c)out.push(`<path d="${c}" ${st(null,'var(--stage)',2.2,'stroke-linejoin:round')}/>`);}
+  if(bend<.05){A(6,312,'5′','start','an',true);A(6,374,'3′','start','an',true);}
+  if(!o.nums)A(500,482,'hebra codificante: 5′→3′ · hebra molde: 3′→5′ · el ARN crece 5′→3′','middle','an',true);
   /* mapa del gen */
   out.push(`<rect x="0" y="409" width="300" height="2" ${st('var(--line)')}/><rect x="880" y="409" width="105" height="2" ${st('var(--line)')}/>`);
   out.push(H('promotor',`<rect x="300" y="403" width="110" height="14" rx="3" ${st('var(--prom)')}/>`));
@@ -836,6 +839,8 @@ function renderAt(T,opt){
     else{rna+=`<path d="M${x0},230 L${x0+(b2-a)},230" ${st(null,k==='e'?'var(--rna)':'var(--rnaI)',9)}/>`;endX=x0+(b2-a);endKind=k;}}
    const td=`M${endX.toFixed(1)},230 Q${(P.x-16).toFixed(1)},232 ${(P.x-12).toFixed(1)},318`;
    rna+=`<path d="${td}" ${st(null,endKind==='e'?'var(--rna)':'var(--rnaI)',9)}/><path d="M430,230 L${endX.toFixed(1)},230" ${st(null,'transparent',20)}/>`;
+   if(T<55){let c='';for(let x=470;x<endX-20;x+=90)c+=`M${x-4},226 L${x+3},230 L${x-4},234 `;if(c)rna+=`<path d="${c}" ${st(null,'var(--stage)',2,'stroke-linejoin:round')}/>`;}
+   if(T<53)A(P.x-30,300,'3′','end','an',true);
    out.push(H('arn',rna));
    if(T<44)A(424,236,'5′','end','an',true);
    if(T<53&&tip>480)L('arn',520,206,'ARN (transcripto primario)','start',null,null,'lb',Math.min(1,(tip-480)/40)*(1-lin(T,52,53)));
@@ -858,7 +863,7 @@ function renderAt(T,opt){
   }
   /* después del corte */
   if(T>=72&&T<89){
-   out.push(H('arnm',`<path d="M430,230 L720,230" ${st(null,'transparent',20)}/><path d="M430,230 L720,230" ${st(null,'var(--rna)',9)}/><path d="M520,224 L520,236 M610,224 L610,236" ${st(null,'var(--stage)',2)}/>`));
+   out.push(H('arnm',`<path d="M430,230 L720,230" ${st(null,'transparent',20)}/><path d="M430,230 L720,230" ${st(null,'var(--rna)',9)}/><path d="M520,224 L520,236 M610,224 L610,236" ${st(null,'var(--stage)',2)}/><path d="M466,226 L473,230 L466,234 M556,226 L563,230 L556,234 M646,226 L653,230 L646,234" ${st(null,'var(--stage)',2,'stroke-linejoin:round')}/>`));
    out.push(H('aauaaa',`<rect x="676" y="221" width="24" height="18" rx="3" ${st('var(--enh)')}/>`));
    const tl=100*prog(T,73,77);if(tl>1)out.push(H('cola',`<path d="${wave(722,230,tl)}" ${st(null,'transparent',18)}/><path d="${wave(722,230,tl)}" ${st(null,'var(--polyA)',5,'stroke-linejoin:round')}/>`));
    if(T<79){L('aauaaa',688,204,'señal AAUAAA','middle',688,219);if(tl>30)L('cola',772,270,'cola poli(A)');L('arnm',520,268,'ARNm (exones unidos)');}
