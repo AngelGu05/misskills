@@ -403,6 +403,15 @@ input.bad{border-bottom-color:var(--bad)!important;color:var(--bad)!important;te
     </div>
 
     <div class="card">
+      <h2>¿De qué hebra sale el ARN? <span class="src"><span class="pill v">Video</span></span></h2>
+      <div class="tbl"><table>
+        <tr><th>Hebra del ADN</th><th>Otros nombres</th><th>Qué pasa con ella</th></tr>
+        <tr><td><b>Hebra molde</b></td><td><b>No codificante</b></td><td>La polimerasa la <b>lee</b> de 3′ a 5′. <b>De ella se copia el ARN</b>, que le es <b>complementario</b>.</td></tr>
+        <tr><td><b>Hebra codificante</b></td><td>No molde</td><td>No se lee. Su secuencia es <b>igual a la del ARN</b>, pero con T donde el ARN tiene U.</td></tr>
+      </table></div>
+      <p class="note" style="margin-top:10px">Truco: el ARN se <b>copia</b> de la NO codificante y se <b>parece</b> a la codificante.</p>
+    </div>
+    <div class="card">
       <h2>Genes y regiones intergénicas <span class="src"><span class="pill v">Video</span><span class="pill a">Apuntes</span></span></h2>
       <ul class="clean">
         <li>Un <b>cromosoma humano</b> contiene <b>miles de genes</b>. Un fragmento de su ADN puede tener unos <b>15 genes</b> de distintos tamaños.</li>
@@ -587,6 +596,7 @@ const DEF={
    h:'Se copia al ARN y luego se elimina en el splicing, así que no queda en el ARNm maduro. Es clave para el splicing alternativo, con el que un gen da varias proteínas.'},
  codificante:{n:'Hebra codificante (no molde)',c:'--dna',src:'v',w:'La hebra del ADN que la polimerasa NO lee.',
    h:'Sirve de referencia: su secuencia es la misma que tendrá el ARN, cambiando cada T por U.',
+   warn:'Ojo: aunque se llame "codificante", el ARN NO se copia de esta hebra. Se copia de la hebra molde, que es la NO codificante. Esta se llama codificante porque su secuencia es igual a la del ARN (con T en vez de U).',
    names:['codificante','no molde','hebra sentido'],not:['no codificante'],fn:'No la lee la polimerasa; el ARN tiene su misma secuencia pero con U en lugar de T.'},
  molde:{n:'Hebra molde (no codificante)',c:'--tmpl',src:'v',w:'La hebra del ADN que lee la ARN polimerasa II.',
    h:'Es el "modelo": la polimerasa la lee de 3′ a 5′ y, frente a cada base, coloca el ribonucleótido complementario. Por eso el ARN es complementario a ella.',
@@ -678,7 +688,7 @@ const STEPS=[
  {t:'El enhancer activa a la polimerasa',s:'Iniciación',src:'va',who:['enhancer','activador','mediador','pol2','tbp','basales'],
   h:'<p>Río arriba, en la región intergénica, un <b>factor de transcripción regulatorio (FTR)</b> se une al <b>enhancer</b>. El ADN <b>se dobla</b> y el enhancer se conecta, a través de la <b>proteína mediadora</b>, con el complejo del promotor.</p><p>Esa conexión <b>activa a la ARN polimerasa II</b> y empieza la elongación.</p><p class="note">El video no se escucha entre 3:44 y 3:57: ese tramo nombra al <b>factor de transcripción regulatorio (FTR)</b>, que en tus apuntes aparece como "FRT".</p>'},
  {t:'Elongación: se copia la hebra molde',s:'Elongación',src:'vpa',who:['pol2','molde','codificante','burbuja','rntp','arn','complementariedad'],
-  h:'<p>La ARN polimerasa II abre el ADN (la <b>burbuja de transcripción</b>), lee la <b>hebra molde</b> de <b>3′ a 5′</b> y fabrica el ARN de <b>5′ a 3′</b> con <b>ribonucleótidos trifosfato</b>.</p><p>El ARN es complementario a la hebra molde y casi idéntico a la <b>hebra codificante</b>: lleva <b>uracilo (U)</b> donde el ADN tiene timina (T).</p><p class="ppt">PPT, paso 3: la enzima "se mueve" a lo largo del ADN, haciendo una copia hasta llegar al final del gen.</p><p class="note">Error común: decir que el ARN se forma de 3′ a 5′. Se <b>lee</b> 3′→5′, se <b>fabrica</b> 5′→3′.</p><p class="note">En un examen anterior, "5′ a 3′" se marcó incorrecto en "dirección en que se forma la cadena de ARN". En el examen escribe las dos direcciones: molde 3′→5′, ARN 5′→3′.</p>'},
+  h:'<p>El ARN se copia de la <b>hebra molde</b>, que es la <b>hebra no codificante</b> del ADN.</p><p>La ARN polimerasa II abre el ADN (la <b>burbuja de transcripción</b>), lee la <b>hebra molde</b> de <b>3′ a 5′</b> y fabrica el ARN de <b>5′ a 3′</b> con <b>ribonucleótidos trifosfato</b>.</p><p>El ARN es complementario a la hebra molde y casi idéntico a la <b>hebra codificante</b>: lleva <b>uracilo (U)</b> donde el ADN tiene timina (T).</p><p class="ppt">PPT, paso 3: la enzima "se mueve" a lo largo del ADN, haciendo una copia hasta llegar al final del gen.</p><p class="note">Error común: decir que el ARN se forma de 3′ a 5′. Se <b>lee</b> 3′→5′, se <b>fabrica</b> 5′→3′.</p><p class="note">En un examen anterior, "5′ a 3′" se marcó incorrecto en "dirección en que se forma la cadena de ARN". En el examen escribe las dos direcciones: molde 3′→5′, ARN 5′→3′.</p>'},
  {t:'Caperuza en 5′',s:'Procesamiento',src:'v',who:['cap','xrn2','arn','pol2'],
   h:'<p>El ARN se modifica <b>mientras se transcribe</b> (modificaciones cotranscripcionales), así que el transcripto primario "puro" no existe en la naturaleza.</p><p>En el extremo 5′ se agrega un nucleótido de guanina modificado, la <b>7-metilguanosina trifosfato</b>: la caperuza. Protege al ARNm de ribonucleasas como la <b>XRN2</b>, que si no se unirían al extremo 5′ libre y lo degradarían, y ayuda a que los ribosomas lo reconozcan al traducir.</p>'},
  {t:'Splicing: fuera los intrones',s:'Procesamiento',src:'v',who:['espliceosoma','lazo','dador','ramificacion','receptor','cap','pol2'],
@@ -701,7 +711,7 @@ const CAPS=[[0,'Este es un fragmento de ADN dentro del núcleo. A la derecha est
  [26,'La proteína mediadora conecta el complejo del enhancer con el del promotor.'],
  [28,'La ARN polimerasa II queda activada: empieza la transcripción.'],
  [31,'Elongación: la polimerasa abre el ADN (burbuja de transcripción) y avanza por el gen.'],
- [35,'Lee la hebra molde de 3′ a 5′ y fabrica el ARN de 5′ a 3′ con ribonucleótidos trifosfato.'],
+ [35,'El ARN se copia de la hebra molde (la NO codificante): la polimerasa la lee de 3′ a 5′ y fabrica el ARN de 5′ a 3′.'],
  [39,'El ARN es complementario a la hebra molde y casi igual a la codificante, pero con U en lugar de T.'],
  [43,'Mientras se transcribe, el ARN ya se modifica. Primero llega la caperuza (7-metilguanosina) al extremo 5′.'],
  [47.5,'Una ribonucleasa (XRN2) intenta degradar el ARN desde el extremo 5′, pero la caperuza se lo impide.'],
@@ -790,11 +800,12 @@ function renderAt(T,opt){
   const tg=T>=7&&T<9.5?.42+.4*Math.abs(Math.sin(T*4)):.42;
   out.push(H('tata',`<rect x="330" y="313" width="38" height="48" rx="5" ${st('var(--prom)',null,0,`opacity:${tg.toFixed(2)}`)}/>`));
   out.push(H('codificante',`<path d="${dC}" ${st(null,'transparent',16)}/><path d="${dC}" ${st(null,'var(--dna)',6,'stroke-linecap:round')}/>`));
+  if(bub)out.push(`<path d="M${b0},352 Q${bx},${(352+44*amp).toFixed(1)} ${b1},352" ${st(null,'var(--tmpl)',14,`opacity:${(.35*amp).toFixed(2)};stroke-linecap:round`)}/>`);
   out.push(H('molde',`<path d="${dT}" ${st(null,'transparent',16)}/><path d="${dT}" ${st(null,'var(--tmpl)',6,'stroke-linecap:round')}/>`));
   A(994,327,'3′','middle','an',true);A(994,357,'5′','middle','an',true);
   {let c='';[470,620,770,920].filter(x=>!(bub&&Math.abs(x-bx)<95)).forEach(x=>{c+=`M${x-5},317 L${x+3},322 L${x-5},327 M${x+5},347 L${x-3},352 L${x+5},357 `});if(c)out.push(`<path d="${c}" ${st(null,'var(--stage)',2.2,'stroke-linejoin:round')}/>`);}
   if(bend<.05){A(6,312,'5′','start','an',true);A(6,374,'3′','start','an',true);}
-  if(!o.nums)A(500,482,'hebra codificante: 5′→3′ · hebra molde: 3′→5′ · el ARN crece 5′→3′','middle','an',true);
+  if(!o.nums)A(500,482,'codificante 5′→3′ · molde (no codificante) 3′→5′: de ella se copia el ARN · ARN 5′→3′','middle','an',true);
   /* mapa del gen */
   out.push(`<rect x="0" y="409" width="300" height="2" ${st('var(--line)')}/><rect x="880" y="409" width="105" height="2" ${st('var(--line)')}/>`);
   out.push(H('promotor',`<rect x="300" y="403" width="110" height="14" rx="3" ${st('var(--prom)')}/>`));
@@ -805,8 +816,8 @@ function renderAt(T,opt){
   if(T<21&&bend<.05){L('enhancer',115,306,'enhancer');if(T<21)L('intergenica',225,386,'región intergénica','middle',null,null,'lb',1-lin(T,20,21));}
   else if(bend>.5)L('enhancer',em[0],em[1]-28,'enhancer','middle',null,null,'lb',Math.min(1,(bend-.5)*3)*(1-lin(T,31,32)));
   L('tata',349,384,'caja TATA','middle',null,null,'lb',1-lin(T,30,31));
-  if(T<31){L('codificante',980,306,'hebra codificante (5′→3′)','end',null,null,'lb',1-lin(T,6,7));L('molde',980,382,'hebra molde (3′→5′)','end',null,null,'lb',1-lin(T,6,7));}
-  else if(T<84.5){const lx=P&&P.x>660?460:980,an=lx===460?'start':'end';L('codificante',lx,306,'hebra codificante',an);L('molde',lx,382,'hebra molde',an);}
+  if(T<31){L('codificante',980,306,'hebra codificante (5′→3′)','end',null,null,'lb',1-lin(T,6,7));L('molde',980,382,'hebra molde o no codificante (3′→5′)','end',null,null,'lb',1-lin(T,6,7));}
+  else if(T<84.5){const lx=P&&P.x>660?460:980,an=lx===460?'start':'end';L('codificante',lx,306,'hebra codificante',an);L('molde',lx,382,'hebra molde (no codificante)',an);}
   const s1o=1-lin(T,17,18.5);
   if(s1o>0){out.push(H('sitio1',`<g style="opacity:${s1o.toFixed(2)}"><path d="M430,316 L430,290 L450,290" ${st(null,'var(--ink)',2.5)}/><path d="M448,284 L460,290 L448,296Z" ${st('var(--ink)')}/></g>`));L('sitio1',468,295,'+1','start',null,null,'lb',s1o);}
   /* factores basales */
@@ -1095,6 +1106,8 @@ const MC=[
  {id:'m68',tp:'pro',st:6,q:'El espliceosoma está formado por:',o:['snRNP (ribonucleoproteínas nucleares pequeñas)','ADN polimerasas','ribosomas','factores basales'],a:0,ex:'snRNP = small nuclear ribonucleoproteins.'},
  {id:'m69',tp:'pro',st:6,q:'La secuencia que se encuentra al comienzo de todos los intrones (consenso dador) es:',o:['AG','GU','AAUAAA','TATA'],a:1,ex:'GU al comienzo (dador) y AG al final (aceptor).'},
  {id:'m70',tp:'pro',st:6,q:'La secuencia AG, al final de todos los intrones, se llama:',o:['consenso dador','consenso aceptor','consenso de ramificación','señal de poliadenilación'],a:1,ex:'En el video también se le dice consenso receptor.'},
+ {id:'m71',tp:'elo',st:4,q:'El ARN se copia (transcribe) a partir de:',o:['la hebra codificante','la hebra molde, también llamada no codificante','las dos hebras a la vez','el ARNt'],a:1,ex:'El ARN es complementario a la hebra molde (no codificante) y se parece a la codificante.'},
+ {id:'m72',tp:'elo',st:4,q:'Si el ARN tiene la misma secuencia que la hebra codificante (con U en vez de T), ¿por qué no se copia de ella?',o:['Porque la polimerasa lee la hebra molde (no codificante) y coloca bases complementarias; por eso el ARN termina igual a la codificante','Porque la hebra codificante está en el citoplasma','Porque la codificante no tiene genes','Sí se copia de la codificante'],a:0,ex:'Complementario a la molde = igual a la codificante (cambiando T por U).'},
  {id:'m54',tp:'gen',st:0,q:'Un cromosoma humano contiene:',o:['un solo gen','miles de genes','exactamente 15 genes','solo intrones'],a:1,ex:'Un fragmento puede tener unos 15 genes, pero el cromosoma completo tiene miles.'}
 ];
 const FILL=[
@@ -1137,6 +1150,7 @@ const FILL=[
  {id:'f45',tp:'ini',st:3,q:'Factor de transcripción que se une al enhancer (nombre y sigla):',parts:[{k:['ftr','frt','regulatorio','factor de regulacion'],show:'factor de transcripción regulatorio (FTR)'}],ex:'Con la proteína mediadora activa a la ARN polimerasa II.'},
  {id:'f46',tp:'pro',st:6,q:'En relación a las secuencias consenso del intrón, diga:',parts:[{p:'a. Secuencia del consenso dador (comienzo del intrón)',k:['=gu','g u'],show:'GU'},{p:'b. Secuencia del consenso aceptor (final del intrón)',k:['=ag','a g'],show:'AG'},{p:'c. Nucleótido que se resalta del consenso de ramificación',k:['=a','adenina'],show:'A (adenina)'}],ex:'Las tres las reconoce el espliceosoma.'},
  {id:'f47',tp:'pro',st:6,q:'Componentes que forman el espliceosoma (sigla):',parts:[{k:['snrnp','ribonucleoproteina'],show:'snRNP (ribonucleoproteínas nucleares pequeñas)'}],ex:'Del inglés small nuclear ribonucleoproteins.'},
+ {id:'f48',tp:'elo',st:4,q:'Hebra del ADN de la que se copia el ARN (dos nombres):',parts:[{p:'a. Nombre 1',k:['molde'],not:['no molde'],show:'hebra molde'},{p:'b. Nombre 2',k:['no codificante','noncodificante','antisentido'],show:'hebra no codificante'}],ex:'La otra hebra se llama codificante porque se parece al ARN.'},
  {id:'f38',tp:'ini',st:1,q:'Sección de ADN a la que se une la ARN polimerasa y el factor de transcripción:',parts:[{k:['promotor'],show:'promotor'}],ex:'Ahí está la caja TATA.'},
  {id:'f39',tp:'gen',st:0,q:'Son las secciones del gen que codifican aminoácidos:',parts:[{k:['exon'],show:'exones'}],ex:'Las regiones UTR también son exón, pero no codifican.'},
  {id:'f40',tp:'gen',st:null,q:'Procesos que abarca la expresión génica (solo nombres):',parts:[{k:['&replica,transcrip,traduc'],show:'replicación, transcripción y traducción'}],ex:'Según el esquema del PPT.'},
