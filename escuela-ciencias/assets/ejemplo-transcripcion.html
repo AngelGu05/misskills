@@ -424,16 +424,16 @@ input.bad{border-bottom-color:var(--bad)!important;color:var(--bad)!important;te
     </div>
 
     <div class="card wide">
-      <h2>Factores de transcripción: basales y específicos <span class="src"><span class="pill v">Video</span><span class="pill p">PPT</span><span class="pill a">Apuntes</span><span class="pill x">Externo</span></span></h2>
+      <h2>Factores de transcripción: basales y regulatorios <span class="src"><span class="pill v">Video</span><span class="pill p">PPT</span><span class="pill a">Apuntes</span><span class="pill x">Externo</span></span></h2>
       <p><b>Factor de transcripción</b> = proteína que dirige cómo ocurre la transcripción. Según el PPT, se asocian con el inicio de los genes que hay que transcribir e indican <b>cuándo empieza y cuándo se detiene</b> el proceso. Hay dos grupos:</p>
       <div class="tbl"><table>
-        <tr><th></th><th>Factores basales (generales)</th><th>Factores específicos (activadores)</th></tr>
+        <tr><th></th><th>Factores basales (generales)</th><th>Factores regulatorios (FTR)</th></tr>
         <tr><td>Qué son</td><td>Los factores <b>mínimos</b> que necesita cualquier gen que transcribe la ARN polimerasa II. "Basal" = de base.</td><td>Proteínas que solo actúan sobre ciertos genes y deciden si ese gen se enciende más. <span class="pill x">Externo</span></td></tr>
         <tr><td>Dónde se unen</td><td>Al <b>promotor</b>. El primero es la <b>TBP</b>, que se une a la <b>caja TATA</b>.</td><td>Al <b>enhancer</b>, río arriba, en la región intergénica.</td></tr>
         <tr><td>Qué hacen</td><td>Se ensamblan uno tras otro en el promotor, regulan la transcripción y permiten que la <b>ARN polimerasa II se una</b> y quede en el sitio +1.</td><td>Cuando el ADN se dobla, mandan la señal (a través de la <b>proteína mediadora</b>) que <b>activa</b> a la polimerasa ya colocada.</td></tr>
-        <tr><td>Ejemplos</td><td>TBP. <span class="pill x">Externo</span> En los libros: TFIIA, TFIIB, TFIID (contiene la TBP), TFIIE, TFIIF y TFIIH.</td><td>Proteína activadora del enhancer.</td></tr>
+        <tr><td>Ejemplos</td><td>TBP. <span class="pill x">Externo</span> En los libros: TFIIA, TFIIB, TFIID (contiene la TBP), TFIIE, TFIIF y TFIIH.</td><td>El <b>factor de transcripción regulatorio (FTR)</b> que se une al enhancer. En tus apuntes: "FRT".</td></tr>
       </table></div>
-      <div class="analog"><b>Analogía:</b> los factores basales son como poner el carro en marcha (llave, motor encendido): sin ellos no arranca. Los específicos son el acelerador: deciden si ese gen se transcribe con fuerza.</div>
+      <div class="analog"><b>Analogía:</b> los factores basales son como poner el carro en marcha (llave, motor encendido): sin ellos no arranca. Los regulatorios (FTR) son el acelerador: deciden si ese gen se transcribe con fuerza.</div>
       <p class="note" style="margin-top:12px">En tus apuntes dice "se le unen <b>factores de conversión</b> junto con la ARN polimerasa II": se refiere a estos mismos <b>factores de transcripción basales</b>. "Conversión" fue un error al copiar.</p>
     </div>
 
@@ -519,7 +519,7 @@ input.bad{border-bottom-color:var(--bad)!important;color:var(--bad)!important;te
       <ul class="clean">
         <li><b>"Factores de conversión"</b> → factores de transcripción <b>basales</b>.</li>
         <li><b>"Sitio: ?"</b> → <b>sitio +1</b>, donde empieza la transcripción.</li>
-        <li><b>"FRT: factor de regulación de transcripción"</b> → no aparece en el video ni en el PPT. Confírmalo con tu profesora.</li>
+        <li><b>"FRT: factor de regulación de transcripción"</b> → es el <b>factor de transcripción regulatorio (FTR)</b>: la proteína que se une al enhancer y, con el mediador, activa a la ARN polimerasa II.</li>
         <li><b>Ribosomas:</b> sintetizan proteínas junto al RER.</li>
         <li><b>Poros nucleares:</b> el ADN no puede atravesarlos, el ARN sí.</li>
         <li><b>Burbuja de transcripción:</b> se forma cuando se abre el ADN.</li>
@@ -571,9 +571,9 @@ function pw(T,k){if(T<=k[0][0])return k[0][1];for(let i=1;i<k.length;i++)if(T<=k
 const DEF={
  intergenica:{n:'Región intergénica',c:'--dna',src:'va',w:'Zona del ADN que separa un gen de otro dentro del genoma.',h:'Separa los genes y puede cumplir funciones reguladoras y estructurales. Aquí contiene el enhancer, que ayuda a encender el gen.'},
  enhancer:{n:'Enhancer (potenciador)',c:'--enh',src:'vx',w:'Secuencia reguladora de ADN ubicada río arriba del gen, en la región intergénica.',
-   h:'Sirve de punto de anclaje para la proteína activadora. Cuando el ADN se dobla, acerca esa proteína al promotor y así ayuda a activar a la ARN polimerasa II.',
-   r:{3:'La proteína activadora se une aquí; el ADN se dobla y el enhancer queda conectado al promotor a través del mediador.'},
-   names:['enhancer','potenciador','intensificador','amplificador'],fn:'Es el sitio río arriba donde se une la proteína activadora; al doblarse el ADN se conecta con el promotor (vía mediador) y activa a la ARN polimerasa II.'},
+   h:'Sirve de punto de anclaje para el factor de transcripción regulatorio (FTR). Cuando el ADN se dobla, acerca ese factor al promotor y así ayuda a activar a la ARN polimerasa II.',
+   r:{3:'El FTR se une aquí; el ADN se dobla y el enhancer queda conectado al promotor a través del mediador.'},
+   names:['enhancer','potenciador','intensificador','amplificador'],fn:'Es el sitio río arriba donde se une el factor de transcripción regulatorio (FTR); al doblarse el ADN se conecta con el promotor (vía mediador) y activa a la ARN polimerasa II.'},
  promotor:{n:'Promotor',c:'--prom',src:'vpa',w:'Secuencia de ADN justo antes del gen (el PPT lo define como la región de ADN próxima a un gen donde la ARN polimerasa y los factores de transcripción se unen para iniciar la transcripción). Contiene la caja TATA.',
    h:'Le indica a la maquinaria dónde está el inicio del gen: ahí se ensamblan los factores basales y se coloca la ARN polimerasa II. Cada tipo de ARN polimerasa tiene su propio promotor.',
    warn:'Error común: el promotor NO es el sitio de inicio. Está antes del gen; la copia empieza en el sitio +1.'},
@@ -600,15 +600,15 @@ const DEF={
    warn:'En tus apuntes aparece "factores de conversión": se refiere a estos mismos factores de transcripción basales.'},
  pol2:{n:'ARN polimerasa II',c:'--pol',src:'vpa',w:'La enzima principal de la transcripción de los genes que producen ARN mensajero. Hay tres ARN polimerasas, cada una con su propio promotor; por eso esta es la "II".',
    h:'Abre el ADN, lee la hebra molde de 3′ a 5′ y une ribonucleótidos trifosfato para fabricar el ARN de 5′ a 3′. Al final se suelta del ADN.',
-   r:{2:'Se une al final sobre los factores, con su sitio activo en el +1. Está casi lista, pero todavía no empieza.',3:'Se activa gracias a la proteína activadora del enhancer y al mediador.',4:'Avanza por el gen copiando la hebra molde.',5:'Sigue avanzando mientras al ARN le ponen la caperuza.',6:'Sigue transcribiendo mientras el espliceosoma quita los intrones.',7:'Sigue transcribiendo aunque el ARN ya se cortó: ahora fabrica ARN sobrante.',8:'La ribonucleasa choca con ella: se desestabiliza y se suelta del ADN.'},
+   r:{2:'Se une al final sobre los factores, con su sitio activo en el +1. Está casi lista, pero todavía no empieza.',3:'Se activa gracias al factor de transcripción regulatorio (FTR) del enhancer y al mediador.',4:'Avanza por el gen copiando la hebra molde.',5:'Sigue avanzando mientras al ARN le ponen la caperuza.',6:'Sigue transcribiendo mientras el espliceosoma quita los intrones.',7:'Sigue transcribiendo aunque el ARN ya se cortó: ahora fabrica ARN sobrante.',8:'La ribonucleasa choca con ella: se desestabiliza y se suelta del ADN.'},
    names:['polimerasa'],fn:'Lee la hebra molde (3′→5′) y sintetiza el ARN (5′→3′).'},
- activador:{n:'Proteína activadora',c:'--act',src:'x',w:'Un factor de transcripción específico que se une al enhancer.',
-   h:'Cuando el ADN se dobla, envía la señal (a través del mediador) que activa a la ARN polimerasa II para que empiece a transcribir.',
-   warn:'Este nombre cae en el tramo del video que no se escucha (3:44–3:57). Es información externa.',
-   names:['activador','activadora','factor de transcripcion especifico','factor especifico'],fn:'Se une al enhancer y, a través del mediador, activa a la ARN polimerasa II.'},
+ activador:{n:'Factor de transcripción regulatorio (FTR)',c:'--act',src:'va',w:'Un factor de transcripción que no es basal: se une al enhancer y regula (enciende) el gen. En tus apuntes aparece como "FRT: factor de regulación de transcripción".',
+   h:'Se une al enhancer y, cuando el ADN se dobla, envía la señal (a través del mediador) que activa a la ARN polimerasa II para que empiece a transcribir.',
+   warn:'Su nombre cae en el tramo del video que no se escucha (3:44–3:57). En algunos libros también se le llama proteína activadora (dato externo).',
+   names:['ftr','frt','regulatorio','factor de regulacion','regulador','activador','activadora'],fn:'Se une al enhancer y, a través del mediador, activa a la ARN polimerasa II.'},
  mediador:{n:'Proteína mediadora',c:'--med',src:'v',w:'Proteína que hace de puente entre el enhancer y el promotor.',
    h:'Cuando el ADN se dobla, conecta el complejo del enhancer con el complejo de proteínas del promotor. Esa conexión activa a la ARN polimerasa II.',
-   names:['mediador','mediadora'],fn:'Conecta el enhancer (con su activador) con el complejo del promotor y así activa a la ARN polimerasa II.'},
+   names:['mediador','mediadora'],fn:'Conecta el enhancer (con su FTR) con el complejo del promotor y así activa a la ARN polimerasa II.'},
  burbuja:{n:'Burbuja de transcripción',c:'--tmpl',src:'pa',w:'La zona donde las dos hebras del ADN se separan.',
    h:'Deja expuesta la hebra molde para que la polimerasa la pueda leer. Avanza junto con la enzima y detrás de ella el ADN vuelve a cerrarse.',
    names:['burbuja'],fn:'Separación temporal de las hebras para que la polimerasa pueda leer la hebra molde.'},
@@ -675,8 +675,8 @@ const STEPS=[
   h:'<p>La <b>TBP</b>, el primer factor de transcripción basal, se une a la <b>caja TATA</b>. Después se unen más proteínas al promotor: regulan la transcripción y preparan el lugar para la ARN polimerasa II.</p><p class="ppt">PPT, paso 1: el factor de transcripción reconoce el inicio o promotor.</p>'},
  {t:'Llega la ARN polimerasa II',s:'Iniciación',src:'vpa',who:['pol2','tbp','basales','promotor','sitio1'],
   h:'<p>Por último se une la <b>ARN polimerasa II</b>. Su sitio activo queda entre <b>25 y 30 pares de bases río abajo</b> del promotor, en el <b>sitio +1</b>. Está casi lista, pero <b>todavía no empieza</b>.</p><p>Hay tres ARN polimerasas, cada una con su propio promotor; la II se une a los genes que dan ARN mensajero, entre otros.</p><p class="ppt">PPT, paso 2: la ARN polimerasa se une con el factor de transcripción y reconoce la región del inicio (TATA).</p>'},
- {t:'El enhancer activa a la polimerasa',s:'Iniciación',src:'vx',who:['enhancer','activador','mediador','pol2','tbp','basales'],
-  h:'<p>Río arriba, en la región intergénica, una <b>proteína activadora</b> se une al <b>enhancer</b>. El ADN <b>se dobla</b> y el enhancer se conecta, a través de la <b>proteína mediadora</b>, con el complejo del promotor.</p><p>Esa conexión <b>activa a la ARN polimerasa II</b> y empieza la elongación.</p><p class="note">El video no se escucha entre 3:44 y 3:57. El nombre "proteína activadora" es información externa.</p>'},
+ {t:'El enhancer activa a la polimerasa',s:'Iniciación',src:'va',who:['enhancer','activador','mediador','pol2','tbp','basales'],
+  h:'<p>Río arriba, en la región intergénica, un <b>factor de transcripción regulatorio (FTR)</b> se une al <b>enhancer</b>. El ADN <b>se dobla</b> y el enhancer se conecta, a través de la <b>proteína mediadora</b>, con el complejo del promotor.</p><p>Esa conexión <b>activa a la ARN polimerasa II</b> y empieza la elongación.</p><p class="note">El video no se escucha entre 3:44 y 3:57: ese tramo nombra al <b>factor de transcripción regulatorio (FTR)</b>, que en tus apuntes aparece como "FRT".</p>'},
  {t:'Elongación: se copia la hebra molde',s:'Elongación',src:'vpa',who:['pol2','molde','codificante','burbuja','rntp','arn','complementariedad'],
   h:'<p>La ARN polimerasa II abre el ADN (la <b>burbuja de transcripción</b>), lee la <b>hebra molde</b> de <b>3′ a 5′</b> y fabrica el ARN de <b>5′ a 3′</b> con <b>ribonucleótidos trifosfato</b>.</p><p>El ARN es complementario a la hebra molde y casi idéntico a la <b>hebra codificante</b>: lleva <b>uracilo (U)</b> donde el ADN tiene timina (T).</p><p class="ppt">PPT, paso 3: la enzima "se mueve" a lo largo del ADN, haciendo una copia hasta llegar al final del gen.</p><p class="note">Error común: decir que el ARN se forma de 3′ a 5′. Se <b>lee</b> 3′→5′, se <b>fabrica</b> 5′→3′.</p><p class="note">En un examen anterior, "5′ a 3′" se marcó incorrecto en "dirección en que se forma la cadena de ARN". En el examen escribe las dos direcciones: molde 3′→5′, ARN 5′→3′.</p>'},
  {t:'Caperuza en 5′',s:'Procesamiento',src:'v',who:['cap','xrn2','arn','pol2'],
@@ -696,7 +696,7 @@ const CAPS=[[0,'Este es un fragmento de ADN dentro del núcleo. A la derecha est
  [9.5,'Se unen más factores basales al promotor. Regulan la transcripción y preparan el lugar para la polimerasa.'],
  [15,'Llega la ARN polimerasa II y se une sobre los factores del promotor.'],
  [19,'Su sitio activo queda 25–30 pares de bases río abajo del promotor, en el sitio +1. Está casi lista, pero no empieza todavía.'],
- [21,'Una proteína activadora llega y se une al enhancer, río arriba.'],
+ [21,'Un factor de transcripción regulatorio (FTR) llega y se une al enhancer, río arriba.'],
  [23.5,'El ADN se dobla: el enhancer se acerca al promotor.'],
  [26,'La proteína mediadora conecta el complejo del enhancer con el del promotor.'],
  [28,'La ARN polimerasa II queda activada: empieza la transcripción.'],
@@ -818,7 +818,7 @@ function renderAt(T,opt){
   /* activador y mediador */
   if(T>=21&&T<32.5){const p=prog(T,21,23.5);const base=[lerp(120,115,p),lerp(40,300,p)];const ax=lerp(base[0],345,bend),ay=lerp(base[1],190,bend);const fo=1-lin(T,31,32.5);
    out.push(H('activador',`<circle cx="${ax.toFixed(1)}" cy="${ay.toFixed(1)}" r="18" ${st('var(--act)',null,0,`opacity:${fo.toFixed(2)}`)}/>`));
-   L('activador',ax+85,ay-4,'proteína activadora','start',ax+18,ay,'lb',fo);
+   L('activador',ax+85,ay-4,'factor regulatorio (FTR)','start',ax+18,ay,'lb',fo);
    if(T>=26){const s=prog(T,26,28);out.push(H('mediador',`<ellipse cx="390" cy="242" rx="${(48*s).toFixed(1)}" ry="${(28*s).toFixed(1)}" ${st('var(--med)',null,0,`opacity:${(.92*fo).toFixed(2)}`)}/>`));
     L('mediador',500,246,'proteína mediadora','start',438,242,'lb',s*fo);}
   }
@@ -1036,7 +1036,7 @@ const MC=[
  {id:'m13',tp:'pro',st:7,q:'La señal de poliadenilación es la secuencia:',o:['TATA','AAUAAA','AUG','GU'],a:1,ex:'AAUAAA, en el último exón, indica a las enzimas dónde unirse.'},
  {id:'m14',tp:'pro',st:7,q:'¿Cuántos nucleótidos de adenina agrega la poli(A) polimerasa?',o:['Entre 15 y 17','Entre 25 y 30','Entre 100 y 200','Más de 1000'],a:2,ex:'Cuidado con los números: 15–17 nt es la distancia al corte; 25–30 pb es la distancia del sitio +1; la cola tiene 100–200 A.'},
  {id:'m15',tp:'ter',st:8,q:'Según el video, la transcripción termina cuando:',o:['la ARN polimerasa encuentra otra caja TATA','una ribonucleasa degrada el ARN sobrante sin caperuza, choca con la ARN polimerasa II y esta se suelta del ADN','la cola poli(A) empuja a la polimerasa fuera del gen','el mediador retira a la polimerasa'],a:1,ex:'El extremo 5′ libre del ARN sobrante es presa fácil para las ribonucleasas.'},
- {id:'m16',tp:'ini',st:3,q:'El enhancer es:',o:['una región reguladora río arriba, en la zona intergénica','una parte del exón que codifica aminoácidos','una enzima que agrega adeninas','el sitio donde empieza la traducción'],a:0,ex:'Cuando se le une la proteína activadora, el ADN se dobla y se conecta con el promotor a través del mediador.'},
+ {id:'m16',tp:'ini',st:3,q:'El enhancer es:',o:['una región reguladora río arriba, en la zona intergénica','una parte del exón que codifica aminoácidos','una enzima que agrega adeninas','el sitio donde empieza la traducción'],a:0,ex:'Cuando se le une el FTR, el ADN se dobla y se conecta con el promotor a través del mediador.'},
  {id:'m17',tp:'ini',st:3,q:'La función de la proteína mediadora es:',o:['eliminar los intrones','conectar el complejo del enhancer con el del promotor para activar a la ARN polimerasa II','agregar la caperuza 5′','degradar el ARN sobrante'],a:1,ex:'El ADN se dobla y el mediador hace de puente; así la polimerasa empieza a transcribir.'},
  {id:'m18',tp:'gen',st:0,q:'Según el dogma central (versión estándar), la información genética fluye:',o:['Proteína → ARN → ADN','ADN → ARN → proteína','ARN → ADN → proteína','ADN → proteína → ARN'],a:1,ex:'ADN → ARN por transcripción; ARN → proteínas por traducción.'},
  {id:'m19',tp:'gen',st:null,q:'El ARN que transporta los aminoácidos para la síntesis de proteínas es:',o:['ARNm','ARNr','ARNt','ARN nucleolar'],a:2,ex:'El ARNt (transferencia) tiene el anticodón que se empareja con el codón del ARNm.'},
@@ -1050,7 +1050,7 @@ const MC=[
  {id:'m27',tp:'gen',st:0,q:'Un exón es:',o:['una región del gen que se elimina del ARN','una región del gen que se mantiene en el ARN maduro','una proteína reguladora','una secuencia del promotor'],a:1,ex:'Incluye partes que codifican aminoácidos y regiones 5′ UTR y 3′ UTR que no codifican.'},
  {id:'m28',tp:'ter',st:9,q:'El ARNm sale del núcleo, pero el ADN no, porque:',o:['el ADN no puede atravesar los poros nucleares y el ARN sí','el ADN se degrada al salir','el ARN se fabrica en el citoplasma','los ribosomas entran al núcleo'],a:0,ex:'Por eso hace falta una copia (ARNm) que lleve la información al citoplasma.'},
  {id:'m29',tp:'ini',st:0,q:'El promotor es:',o:['el sitio exacto donde empieza a transcribirse el gen','una región antes del gen donde se unen los factores de transcripción y la ARN polimerasa','el primer exón del gen','la proteína que activa a la polimerasa'],a:1,ex:'El inicio de la transcripción es el sitio +1, después del promotor.'},
- {id:'m30',tp:'ini',st:1,q:'Los factores de transcripción basales:',o:['solo actúan en el enhancer','son los factores mínimos que se ensamblan en el promotor y permiten que la ARN polimerasa II se una','eliminan los intrones','agregan la cola poli(A)'],a:1,ex:'El primero es la TBP. Los que actúan en el enhancer son los específicos (activadores).'},
+ {id:'m30',tp:'ini',st:1,q:'Los factores de transcripción basales:',o:['solo actúan en el enhancer','son los factores mínimos que se ensamblan en el promotor y permiten que la ARN polimerasa II se una','eliminan los intrones','agregan la cola poli(A)'],a:1,ex:'El primero es la TBP. El que actúa en el enhancer es el factor de transcripción regulatorio (FTR).'},
  {id:'m31',tp:'gen',st:null,q:'Según el PPT, después de que la enzima "se cae" y el ARN es liberado:',o:['el gen se destruye','el proceso de copia puede repetirse varias veces','el ADN sale al citoplasma','la polimerasa se convierte en ribosoma'],a:1,ex:'Un mismo gen puede transcribirse muchas veces.'},
  {id:'m32',tp:'elo',st:4,q:'Si la hebra molde tiene la secuencia 3′-TAC-5′, el ARN que se forma es:',o:['5′-AUG-3′','5′-ATG-3′','3′-UAC-5′','5′-TAC-3′'],a:0,ex:'Es complementario a la molde (T→A, A→U, C→G) y se escribe de 5′ a 3′.'},
  {id:'m33',tp:'elo',st:4,q:'Si la hebra codificante es 5′-GCA TTA-3′, el ARN será:',o:['5′-GCA UUA-3′','5′-CGU AAU-3′','3′-GCA UUA-5′','5′-GCA TTA-3′'],a:0,ex:'El ARN es igual a la hebra codificante, cambiando T por U.'},
@@ -1073,7 +1073,7 @@ const MC=[
  {id:'m50',tp:'gen',st:0,q:'Las regiones 5′ UTR y 3′ UTR:',o:['se eliminan en el splicing','son partes de los exones que no codifican aminoácidos','son intrones','son proteínas reguladoras'],a:1,ex:'Se quedan en el ARNm maduro aunque no codifican.'},
  {id:'m51',tp:'elo',st:4,q:'La burbuja de transcripción se forma porque:',o:['la polimerasa separa las hebras para leer la hebra molde','se agrega la cola poli(A)','el ADN sale del núcleo','se forma el lazo'],a:0,ex:'Avanza junto con la polimerasa.'},
  {id:'m52',tp:'ini',st:1,q:'En tus apuntes aparece "factores de conversión". El nombre correcto es:',o:['factores de traducción','factores de transcripción basales','factores de replicación','factores sigma'],a:1,ex:'Son los factores mínimos que se ensamblan en el promotor.'},
- {id:'m53',tp:'ini',st:3,q:'¿Cuál es la diferencia entre los factores basales y los específicos (activadores)?',o:['Los basales se unen al promotor y los necesita cualquier gen; los específicos se unen al enhancer y activan ciertos genes','Los basales se unen al enhancer y los específicos al promotor','Los basales eliminan intrones','No hay diferencia'],a:0,ex:'Analogía: los basales encienden el carro; los específicos son el acelerador.'},
+ {id:'m53',tp:'ini',st:3,q:'¿Cuál es la diferencia entre los factores basales y los regulatorios (FTR)?',o:['Los basales se unen al promotor y los necesita cualquier gen; el FTR se une al enhancer y activa ciertos genes','Los basales se unen al enhancer y el FTR al promotor','Los basales eliminan intrones','No hay diferencia'],a:0,ex:'Analogía: los basales encienden el carro; el FTR es el acelerador.'},
  {id:'m55',tp:'gen',st:null,q:'Según el PPT, el ARN que se encuentra en menor proporción (menos del 5 % del ARN celular) es el:',o:['ARNm','ARNr','ARNt','ARN nucleolar'],a:0,ex:'El ARNr es el más abundante; el ARNt es cerca del 15 %.'},
  {id:'m56',tp:'gen',st:null,q:'ARN con forma de trébol, de menor peso molecular (70 a 90 nucleótidos):',o:['ARNm','ARNr','ARNt','ARN nucleolar'],a:2,ex:'El ARNt está disperso por el citoplasma y transporta aminoácidos.'},
  {id:'m57',tp:'gen',st:null,q:'Según el PPT, el ARN más abundante y de mayor tamaño y peso molecular es el:',o:['ARNm','ARNr','ARNt','ARN nucleolar'],a:1,ex:'Se localiza en los ribosomas y ayuda a catalizar la síntesis de proteínas.'},
@@ -1086,6 +1086,7 @@ const MC=[
  {id:'m64',tp:'gen',st:null,q:'Unidad con la que se nombran los distintos ARNr según su velocidad de sedimentación en la ultracentrifugación:',o:['nanómetro','Svedberg (S)','dalton','pH'],a:1,ex:'El PPT dice que los ARNr se nombran por su velocidad de sedimentación; esa unidad es el Svedberg (S).'},
  {id:'m65',tp:'ini',st:1,q:'La importancia de la caja TATA es que:',o:['ahí se une la TBP (factor de transcripción) para que se arme el complejo y llegue la ARN polimerasa II','ahí termina la transcripción','ahí se agrega la cola poli(A)','ahí se forma el lazo'],a:0,ex:'Decir solo "marca el inicio" se ha corregido como incompleto: menciona quién se une ahí y para qué.'},
  {id:'m66',tp:'ini',st:2,q:'Según el PPT, la enzima que se "desplaza" sobre la molécula de ADN durante la transcripción es:',o:['la ADN polimerasa','la ARN polimerasa','la helicasa','la ligasa'],a:1,ex:'Paso 3 del PPT: la enzima "se mueve" a lo largo del ADN haciendo una copia.'},
+ {id:'m67',tp:'ini',st:3,q:'La proteína que se une al enhancer para activar la transcripción se llama:',o:['TBP','factor de transcripción regulatorio (FTR)','XRN2','poli(A) polimerasa'],a:1,ex:'En tus apuntes aparece como FRT. La TBP se une a la caja TATA, no al enhancer.'},
  {id:'m54',tp:'gen',st:0,q:'Un cromosoma humano contiene:',o:['un solo gen','miles de genes','exactamente 15 genes','solo intrones'],a:1,ex:'Un fragmento puede tener unos 15 genes, pero el cromosoma completo tiene miles.'}
 ];
 const FILL=[
@@ -1101,7 +1102,7 @@ const FILL=[
  {id:'f10',tp:'pro',st:7,q:'En relación al corte y poliadenilación, diga:',parts:[{p:'a. Secuencia señal',k:['aauaaa'],show:'AAUAAA'},{p:'b. Enzima que agrega la cola',k:['poli a polimerasa','polia polimerasa','poliadenilato polimerasa','pap'],show:'poli(A) polimerasa'},{p:'c. Cantidad de adeninas que agrega',k:['100 200','100 a 200','100 y 200'],show:'100–200'}],ex:'Señal AAUAAA → corte 15–17 nt río abajo → 100–200 A.'},
  {id:'f11',tp:'pro',st:5,q:'Nombre del ARN recién copiado, todavía sin modificar:',parts:[{k:['transcripto primario','transcrito primario','pre arnm','prearnm','pre mensajero','pre arn'],show:'transcripto primario'}],ex:'En eucariotas no existe "puro": se modifica mientras se transcribe.'},
  {id:'f12',tp:'pro',st:5,q:'Las modificaciones que ocurren mientras el ARN se transcribe se llaman:',parts:[{k:['cotranscripcional','co transcripcional'],show:'cotranscripcionales'}],ex:'Caperuza, splicing y corte/poliadenilación.'},
- {id:'f13',tp:'ini',st:3,q:'Región reguladora río arriba a la que se une la proteína activadora:',parts:[{k:['enhancer','potenciador','intensificador'],show:'enhancer'}],ex:'Está en la región intergénica.'},
+ {id:'f13',tp:'ini',st:3,q:'Región reguladora río arriba a la que se une el factor de transcripción regulatorio (FTR):',parts:[{k:['enhancer','potenciador','intensificador'],show:'enhancer'}],ex:'Está en la región intergénica.'},
  {id:'f14',tp:'ini',st:3,q:'Proteína que conecta el enhancer con el complejo del promotor:',parts:[{k:['mediador','mediadora'],show:'proteína mediadora'}],ex:'Al doblarse el ADN, el mediador hace de puente.'},
  {id:'f15',tp:'pro',st:6,q:'Proceso que permite que un solo gen produzca varias proteínas:',parts:[{k:['splicing alternativo','empalme alternativo','corte y empalme alternativo'],show:'splicing alternativo'}],ex:'Ocurre en el ARN, no en el gen.'},
  {id:'f16',tp:'gen',st:0,q:'Según el dogma central, diga:',parts:[{p:'a. Paso de ADN a ARN',k:['transcripcion'],show:'transcripción'},{p:'b. Paso de ARN a proteínas',k:['traduccion'],show:'traducción'}],ex:'ADN → ARN → proteínas.'},
@@ -1125,6 +1126,7 @@ const FILL=[
  {id:'f34',tp:'ter',st:9,q:'Abertura de la envoltura nuclear por donde sale el ARNm:',parts:[{k:['poro'],show:'poro nuclear'}],ex:'El ADN no puede atravesarlo.'},
  {id:'f35',tp:'gen',st:null,q:'Enfermedad en la que se ha encontrado actividad inapropiada de los factores de transcripción en casi todos sus tipos:',parts:[{k:['cancer'],show:'cáncer'}],ex:'Según el PPT.'},
  {id:'f36',tp:'elo',st:4,q:'En relación a la elongación, diga:',parts:[{p:'a. Dirección en que se lee la hebra molde',k:['3 5','3 a 5','3 prima a 5'],show:'3′ → 5′'},{p:'b. Dirección en que se fabrica el ARN',k:['5 3','5 a 3','5 prima a 3'],show:'5′ → 3′'}],ex:'Se lee 3′→5′ y se fabrica 5′→3′.'},
+ {id:'f45',tp:'ini',st:3,q:'Factor de transcripción que se une al enhancer (nombre y sigla):',parts:[{k:['ftr','frt','regulatorio','factor de regulacion'],show:'factor de transcripción regulatorio (FTR)'}],ex:'Con la proteína mediadora activa a la ARN polimerasa II.'},
  {id:'f38',tp:'ini',st:1,q:'Sección de ADN a la que se une la ARN polimerasa y el factor de transcripción:',parts:[{k:['promotor'],show:'promotor'}],ex:'Ahí está la caja TATA.'},
  {id:'f39',tp:'gen',st:0,q:'Son las secciones del gen que codifican aminoácidos:',parts:[{k:['exon'],show:'exones'}],ex:'Las regiones UTR también son exón, pero no codifican.'},
  {id:'f40',tp:'gen',st:null,q:'Procesos que abarca la expresión génica (solo nombres):',parts:[{k:['&replica,transcrip,traduc'],show:'replicación, transcripción y traducción'}],ex:'Según el esquema del PPT.'},
@@ -1147,8 +1149,8 @@ const CASOS=[
   m:'Si el consenso dador no funciona, el espliceosoma no puede formar bien el lazo (la G del dador no se une a la A de ramificación) y ese intrón no se elimina correctamente. El ARNm maduro quedaría con parte del intrón o con los exones mal unidos, y al traducirse la proteína sería distinta o no funcionaría.'},
  {q:'Un estudiante escribe: "Como el ARN es una copia del ADN, el ARN tiene timina y se fabrica de 3′ a 5′". Corrige científicamente sus dos errores.',
   m:'El ARN no tiene timina: lleva uracilo (U) donde la hebra codificante tiene T. Además, el ARN se fabrica de 5′ a 3′; lo que se lee de 3′ a 5′ es la hebra molde del ADN. El ARN es complementario a la hebra molde y casi idéntico a la codificante.'},
- {q:'En un experimento se bloquea la proteína activadora que se une al enhancer de un gen, pero la TBP, los factores basales y la ARN polimerasa II siguen unidos al promotor. Explica científicamente qué pasaría con la transcripción de ese gen.',
-  m:'Aunque la polimerasa está colocada en el sitio +1, no se activa: sin la proteína activadora en el enhancer, el ADN no se dobla para que la proteína mediadora conecte el enhancer con el complejo del promotor. Por eso la transcripción de ese gen no empezaría (o sería muy baja).'}
+ {q:'En un experimento se bloquea el factor de transcripción regulatorio (FTR) que se une al enhancer de un gen, pero la TBP, los factores basales y la ARN polimerasa II siguen unidos al promotor. Explica científicamente qué pasaría con la transcripción de ese gen.',
+  m:'Aunque la polimerasa está colocada en el sitio +1, no se activa: sin el FTR en el enhancer, el ADN no se dobla para que la proteína mediadora conecte el enhancer con el complejo del promotor. Por eso la transcripción de ese gen no empezaría (o sería muy baja).'}
 ];
 const SCEN=[{t:29.5,ids:['enhancer','activador','mediador','tbp','pol2']},{t:40,ids:['pol2','molde','codificante','arn','burbuja']},{t:58.5,ids:['cap','espliceosoma','lazo','pol2','molde']},{t:74.8,ids:['cap','aauaaa','cola','polyapol','sobrante']}];
 const AB_Q='Las imágenes A y B muestran el mismo ARN en dos momentos. Explique qué le pasó al ARN para pasar de A a B y qué consecuencia tiene para la célula.';
@@ -1166,14 +1168,14 @@ const AB_SVG=`<svg viewBox="0 0 520 150" role="img" aria-label="Imagen A: ARN co
 
 
 const PAREO=[['TBP','Primer factor basal; se une a la caja TATA.'],['Caja TATA','Secuencia de A y T dentro del promotor.'],['Promotor','Región antes del gen donde se unen los factores y la ARN polimerasa.'],['Sitio +1','Punto exacto donde empieza la transcripción.'],
- ['Enhancer','Secuencia reguladora río arriba donde se une la proteína activadora.'],['Proteína mediadora','Conecta el complejo del enhancer con el del promotor.'],['ARN polimerasa II','Enzima que sintetiza los ARN mensajeros.'],['Hebra molde','Hebra del ADN que se lee de 3′ a 5′.'],
+ ['Enhancer','Secuencia reguladora río arriba donde se une el factor de transcripción regulatorio (FTR).'],['Proteína mediadora','Conecta el complejo del enhancer con el del promotor.'],['ARN polimerasa II','Enzima que sintetiza los ARN mensajeros.'],['Hebra molde','Hebra del ADN que se lee de 3′ a 5′.'],
  ['Hebra codificante','Hebra casi idéntica al ARN, pero con T en lugar de U.'],['Burbuja de transcripción','Zona donde se separan las dos hebras del ADN.'],['Ribonucleótidos trifosfato','Sustrato con el que se construye el ARN.'],['Transcripto primario','ARN recién copiado, todavía sin modificar.'],
  ['Caperuza 5′','7-metilguanosina que protege el extremo 5′ del ARNm.'],['XRN2','Ribonucleasa que degrada ARN con el extremo 5′ libre.'],['Espliceosoma','Complejo que elimina intrones y une exones.'],['Lazo','Forma que toma el intrón al ser eliminado.'],
  ['Consenso dador','Inicio del intrón; aporta la G que forma el lazo.'],['Consenso de ramificación','Aporta la A que se une a la G del dador.'],['Consenso receptor','Final del intrón, justo antes del exón 2.'],['Splicing alternativo','Permite que un solo gen produzca varias proteínas.'],
  ['AAUAAA','Señal de poliadenilación del último exón.'],['Poli(A) polimerasa','Agrega de 100 a 200 adeninas al extremo cortado.'],['Cola poli(A)','Da estabilidad al ARNm y ayuda a exportarlo.'],['ARN sobrante','ARN sin caperuza que se degrada durante la terminación.'],
  ['Exón','Región del gen que se mantiene en el ARN maduro.'],['Intrón','Región del gen que se elimina del ARN.'],['Región intergénica','Zona del ADN que separa un gen de otro.'],['Poro nuclear','Abertura por donde el ARNm sale al citoplasma.'],
  ['ARNt','Transporta los aminoácidos; tiene el anticodón.'],['ARNr','ARN más abundante; se encuentra en los ribosomas.'],['ARNm','Lleva la información del gen hasta el ribosoma.'],['Factores basales','Factores mínimos que se ensamblan en el promotor.'],
- ['Transcripción','Paso de ADN a ARN.'],['Traducción','Paso de ARN a proteína.'],['Proteína activadora','Factor específico que se une al enhancer.'],['ARN nucleolar','Precursor del ARNr.'],
+ ['Transcripción','Paso de ADN a ARN.'],['Traducción','Paso de ARN a proteína.'],['FTR (factor de transcripción regulatorio)','Factor que se une al enhancer y activa la transcripción.'],['ARN nucleolar','Precursor del ARNr.'],
  ['ARNm','Lleva la información del núcleo al citoplasma y permite la síntesis de proteínas.'],['Factor de transcripción','Indica el inicio y el fin de la transcripción.'],
  ['Caja TATA','Región de inicio en el proceso de transcripción.'],['ARN polimerasa II','Enzima que se "desplaza" sobre la molécula de ADN durante la transcripción.'],
  ['ARNm','Tiene como lugar inicial el núcleo, para después desplazarse al citoplasma.'],['ARNr','Lee el ARNm y participa en la síntesis de proteínas.'],
@@ -1198,7 +1200,7 @@ const PROC_SVG=`<svg viewBox="0 0 720 300" role="img" aria-label="Una molécula 
  <text x="665" y="88" style="font:800 26px var(--display);fill:var(--ink)">1</text><text x="665" y="230" style="font:800 26px var(--display);fill:var(--ink)">2</text></svg>`;
 const ABS=[{q:AB_Q,m:AB_M,svg:()=>`<div class="mini ab">${AB_SVG}</div>`},
  {q:'Las imágenes A y B muestran el mismo gen en dos momentos de la iniciación. Explique qué cambió de A a B, qué estructuras participan y para qué sirve ese cambio.',
-  m:'En A, la TBP, los factores basales y la ARN polimerasa II ya están en el promotor, pero la polimerasa aún no empieza. En B, una proteína activadora se unió al enhancer (río arriba, en la región intergénica), el ADN se dobló y la proteína mediadora conectó el complejo del enhancer con el del promotor. Ese cambio activa a la ARN polimerasa II para que comience la transcripción.',
+  m:'En A, la TBP, los factores basales y la ARN polimerasa II ya están en el promotor, pero la polimerasa aún no empieza. En B, un factor de transcripción regulatorio (FTR) se unió al enhancer (río arriba, en la región intergénica), el ADN se dobló y la proteína mediadora conectó el complejo del enhancer con el del promotor. Ese cambio activa a la ARN polimerasa II para que comience la transcripción.',
   svg:()=>`<div class="abpair"><figure><figcaption>A</figcaption><svg viewBox="0 0 1000 500" role="img" aria-label="Imagen A">${renderAt(20.5,{labels:false,interactive:false})}</svg></figure><figure><figcaption>B</figcaption><svg viewBox="0 0 1000 500" role="img" aria-label="Imagen B">${renderAt(29.5,{labels:false,interactive:false})}</svg></figure></div>`}];
 
 /* ---------- EXAMEN ---------- */
@@ -1293,7 +1295,7 @@ function renderExam(){
  $('#submitEx').onclick=submitExam;
 }
 const linkTo=st=>st==null?'':` <a data-go="${st}" href="#proceso">Ver en el proceso →</a>`;
-const PASOS_M='1) Los factores de transcripción (primero la TBP) reconocen el promotor y se unen a la caja TATA. 2) La ARN polimerasa II se une con los factores y queda en el sitio de inicio (+1); el enhancer, la proteína activadora y el mediador la activan. 3) La enzima abre el ADN (burbuja), "se mueve" a lo largo del gen leyendo la hebra molde de 3′ a 5′ y fabrica el ARN de 5′ a 3′ (con U en lugar de T) hasta llegar al final del gen; mientras tanto el ARN recibe la caperuza 5′, pierde los intrones (splicing) y recibe la cola poli(A). 4) La enzima "se cae" (una ribonucleasa degrada el ARN sobrante y la suelta) y el ARN es liberado; el proceso puede repetirse. 5) Si el ARN codifica una proteína, sale del núcleo al citoplasma para traducirse.';
+const PASOS_M='1) Los factores de transcripción (primero la TBP) reconocen el promotor y se unen a la caja TATA. 2) La ARN polimerasa II se une con los factores y queda en el sitio de inicio (+1); el enhancer, el FTR y el mediador la activan. 3) La enzima abre el ADN (burbuja), "se mueve" a lo largo del gen leyendo la hebra molde de 3′ a 5′ y fabrica el ARN de 5′ a 3′ (con U en lugar de T) hasta llegar al final del gen; mientras tanto el ARN recibe la caperuza 5′, pierde los intrones (splicing) y recibe la cola poli(A). 4) La enzima "se cae" (una ribonucleasa degrada el ARN sobrante y la suelta) y el ARN es liberado; el proceso puede repetirse. 5) Si el ARN codifica una proteína, sale del núcleo al citoplasma para traducirse.';
 async function submitExam(){
  const E=EX;if(E.graded)return;E.graded=true;
  $('#submitEx').disabled=true;$$('#paperIn input,#paperIn textarea').forEach(x=>x.readOnly=true);$$('#paperIn input[type=radio],#paperIn select').forEach(x=>x.disabled=true);
@@ -1460,7 +1462,7 @@ function pAfter(q,ok){
 const SUM=['Antes del gen está el promotor (con la caja TATA); el gen tiene exones e intrones; río arriba, la región intergénica con el enhancer.',
  'La TBP se une a la caja TATA y luego se ensamblan los demás factores de transcripción basales en el promotor.',
  'La ARN polimerasa II se une al complejo; su sitio activo queda en el sitio +1, 25–30 pb río abajo del promotor. Aún no empieza.',
- 'Una proteína activadora se une al enhancer, el ADN se dobla y la proteína mediadora conecta con el promotor: la polimerasa se activa.',
+ 'Un factor de transcripción regulatorio (FTR) se une al enhancer, el ADN se dobla y la proteína mediadora conecta con el promotor: la polimerasa se activa.',
  'Se abre la burbuja; la polimerasa lee la hebra molde de 3′ a 5′ y fabrica el ARN de 5′ a 3′ con ribonucleótidos trifosfato (U en vez de T).',
  'Se agrega la caperuza 5′ (7-metilguanosina trifosfato): protege de la XRN2 y ayuda a que el ribosoma reconozca el ARNm.',
  'El espliceosoma quita los intrones (en forma de lazo) y une los exones; el splicing alternativo permite varias proteínas por gen.',
