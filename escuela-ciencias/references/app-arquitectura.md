@@ -94,6 +94,7 @@ Patrones para que se vea **natural**:
 - En la búsqueda de "Leer todo", los enlaces internos usan `data-jump` con `preventDefault`. Si cambian el `#hash`, el router los confunde con una pestaña.
 
 ## 6. Checklist de pruebas
+0. `node scripts/revisar_texto.js app.html` → "0 coincidencias" (sin referencias personales ni de origen). La leyenda bajo la animación lleva solo los atajos de teclado, sin "Fuentes".
 1. `node --check` del último `<script>` (extráelo con una regex).
 2. Playwright: capturas en `T` = cada `QT[i]` y una cuadrícula para revisarlas juntas, sin etiquetas encimadas ni elementos fuera del cuadro.
 3. Clic en una estructura → la tarjeta muestra "Qué es / Qué hace / En esta parte".

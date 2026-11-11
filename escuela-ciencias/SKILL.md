@@ -74,7 +74,7 @@ Antes de entregar:
 - Revisa la sintaxis del script con `node --check`.
 - Toma capturas con Playwright en varios momentos de la animación, en el examen, en "Leer todo" y en un celular (390 px) sin scroll horizontal.
 - Prueba que cada formato de examen se genere y que su total sea correcto, y que **al elegir un formato la hoja cambie al instante**.
-- Revisa el texto visible de todas las pestañas (y de `DEF`, `STEPS`, `CAPS`, las preguntas y `SUM`) en busca de referencias personales o de origen ("tus apuntes", "PPT", "video", minutos como "3:44", "examen anterior", "profesora", "externo"). Debe dar cero.
+- Revisa el texto visible de todas las pestañas (y de `DEF`, `STEPS`, `CAPS`, las preguntas y `SUM`) en busca de referencias personales o de origen ("tus apuntes", "PPT", "video", minutos como "3:44", "examen anterior", "profesora", "externo"). Debe dar cero. Hazlo con `node scripts/revisar_texto.js app.html`, que recorre todas las pestañas y los datos y termina en "0 coincidencias". Córrelo también antes de mandarle el archivo HTML al usuario.
 
 ### Fase 4: Publicar
 
