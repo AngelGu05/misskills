@@ -16,7 +16,8 @@ El usuario es un estudiante de secundaria que escribe en español informal. Resp
 
 ## Principios (por qué importan)
 
-- **Fidelidad a las fuentes.** El estudiante necesita saber qué viene de su clase, porque eso es lo que le van a preguntar. Mientras no lo autorice, usa solo lo que dicen sus materiales. Cuando agregues algo de fuera, márcalo siempre como **Externo** 🔶. Etiqueta el origen de cada dato: 🎥 Video · 📊 PPT · ✍️ Apuntes · 📝 Examen (visto en exámenes anteriores) · 🔶 Externo.
+- **Fidelidad a las fuentes (en el chat).** El estudiante necesita saber qué viene de su clase, porque eso es lo que le van a preguntar. Mientras no lo autorice, usa solo lo que dicen sus materiales. En tus respuestas del chat (explicación del video, apuntes completos, correcciones), etiqueta el origen de cada dato: 🎥 Video · 📊 PPT · ✍️ Apuntes · 📝 Examen · 🔶 Externo.
+- **La app es pública y profesional.** La página la ven otras personas, no solo el estudiante. En la app **no** pongas referencias personales ni de origen: nada de "en tus apuntes…", "según el PPT", "en el minuto 3:44 del video", "el video no se escucha", "en un examen anterior se marcó…", "tu profesora", "dato externo" ni etiquetas de fuente (Video, PPT, Apuntes, Examen, Externo). Escribe el contenido como un texto de estudio neutral: "El ARN se forma de 5′ a 3′", "En resumen, paso 3 de 5", "En algunos libros también se le llama…". Los consejos de examen sí van, pero en general ("en un examen, escribe ambas direcciones"), sin anécdotas. Los nombres que usa la clase se ponen directamente como nombre oficial, sin decir de dónde salen.
 - **No omitir nada.** El usuario lo pidió de forma explícita: todo lo que dicen sus materiales debe aparecer en algún lado (cifras, nombres, ejemplos, pasos del PPT, notas al margen). Antes de dar algo por terminado, revisa fuente por fuente que nada se quedó fuera.
 - **Cada componente explica "qué es" y "qué hace".** Una definición sin función no le sirvió al usuario y lo dijo. Agrega también "qué hace en esta parte" cuando el componente actúa distinto según la etapa.
 - **No inventar para tapar huecos.** Si a la transcripción le falta un tramo, dilo, con los minutos. Pide que el usuario lo escuche, o completa con información externa marcada. Si una herramienta no puede acceder a algo (YouTube, Vercel), dilo y da los pasos para que lo haga el usuario.
@@ -49,7 +50,7 @@ Detalles en `references/fuentes.md`.
 
 ### Fase 3: Construir la app de estudio
 
-Antes de construir, propone la estructura y pregunta lo esencial: qué contenido entra, cómo quiere el examen, cómo se corrigen las preguntas abiertas y en qué dispositivo la usará. Si el usuario manda **exámenes viejos**, úsalos como **referencia de formato** (tipos de parte, puntajes, estilo de preguntas). Si son del mismo tema, úsalos también como **fuente de contenido** con la etiqueta "Examen" (preguntas, datos nuevos, y qué marcó mal la profesora). En la app, nombra los formatos "Examen 1", "Examen 2"…, nunca "como la profesora", "bimestral" ni "parcial del año pasado". Analiza también en qué falló el estudiante (por ejemplo, preguntas de aplicar vs. de memoria) para reforzar eso.
+Antes de construir, propone la estructura y pregunta lo esencial: qué contenido entra, cómo quiere el examen, cómo se corrigen las preguntas abiertas y en qué dispositivo la usará. Si el usuario manda **exámenes viejos**, úsalos como **referencia de formato** (tipos de parte, puntajes, estilo de preguntas). Si son del mismo tema, úsalos también como **fuente de contenido** (preguntas, datos nuevos, y qué se marcó mal). Comenta en el chat lo que se marcó mal; en la app conviértelo en un consejo general, sin contar la anécdota. Fíjate de quién es el examen: si tiene el nombre de otra persona, no le digas al usuario "contestaste" o "te marcaron", y nunca pongas nombres de personas en la app. En la app, nombra los formatos "Examen 1", "Examen 2"…, nunca "como la profesora", "bimestral" ni "parcial del año pasado". Analiza también en qué falló el estudiante (por ejemplo, preguntas de aplicar vs. de memoria) para reforzar eso.
 
 Parte de la app de ejemplo `assets/ejemplo-transcripcion.html`. Su motor es reutilizable y solo cambian los datos del tema. Lee `references/app-arquitectura.md` para saber qué reemplazar y qué conservar. La app tiene estas secciones:
 
@@ -57,7 +58,7 @@ Parte de la app de ejemplo `assets/ejemplo-transcripcion.html`. Su motor es reut
 |---|---|
 | **Proceso** | Animación **continua** del proceso dividida en partes, como si se viera en persona: play/pausa, línea de tiempo, saltar entre partes, "pausar al final de cada parte", velocidad, subtítulos que narran y atajos de teclado. Cada estructura es **clicable** y muestra qué es, qué hace y qué hace en esta parte. Incluye el modo **"Ponme a prueba"** (señalar estructuras sin etiquetas). |
 | **Leer todo** | Toda la información en una página: resumen de una línea por parte, cada parte con una imagen fija, explicación y componentes desplegados, glosario A–Z, buscador, índice fijo, botón "Ver esta parte en la animación" e impresión a PDF (solo fuera de claude.ai). |
-| **Lo general** | Tarjetas con lo transversal: definición, tipos, características, comparaciones (por ejemplo eucariota vs. procariota), errores comunes y "términos de tus apuntes". |
+| **Lo general** | Tarjetas con lo transversal: definición, tipos, características, comparaciones (por ejemplo eucariota vs. procariota) y "errores comunes y aclaraciones". |
 | **Examen** | **Configurable**: Examen 1, Examen 2… (uno por cada formato real que mande el usuario), solo selección única, solo completar, solo pareo, combinar algunos o combinar todos; largo corto, normal o largo. El total se calcula según lo elegido. Correcciones con explicación y enlace a la parte de la animación. |
 | **Práctica** | 8 preguntas por tema con respuesta al momento y "Repasar mis errores" (guardado en el navegador). |
 
@@ -72,7 +73,8 @@ Banco de preguntas: apunta a ≥60 de selección única, ≥40 de completar, ≥
 Antes de entregar:
 - Revisa la sintaxis del script con `node --check`.
 - Toma capturas con Playwright en varios momentos de la animación, en el examen, en "Leer todo" y en un celular (390 px) sin scroll horizontal.
-- Prueba que cada formato de examen se genere y que su total sea correcto.
+- Prueba que cada formato de examen se genere y que su total sea correcto, y que **al elegir un formato la hoja cambie al instante**.
+- Revisa el texto visible de todas las pestañas (y de `DEF`, `STEPS`, `CAPS`, las preguntas y `SUM`) en busca de referencias personales o de origen ("tus apuntes", "PPT", "video", minutos como "3:44", "examen anterior", "profesora", "externo"). Debe dar cero.
 
 ### Fase 4: Publicar
 

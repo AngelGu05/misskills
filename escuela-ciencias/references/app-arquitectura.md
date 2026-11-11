@@ -38,7 +38,7 @@ Busca estos comentarios en el archivo para ubicarte:
 
 ### `DEF`: un objeto por estructura clicable
 ```js
-id:{n:'Nombre visible', c:'--token-color', src:'vpax',          // fuentes: v=video p=PPT a=apuntes x=externo
+id:{n:'Nombre visible', c:'--token-color', src:'vpax',          // fuentes internas (v=video p=PPT a=apuntes e=examen x=externo); en la página pública pills() devuelve '' y no se muestran
     w:'Qué es (1–2 frases)',
     h:'Qué hace (función; nunca vacío)',
     r:{3:'Qué hace en la parte 3', 8:'…'},                   // opcional, por parte
@@ -51,7 +51,7 @@ id:{n:'Nombre visible', c:'--token-color', src:'vpax',          // fuentes: v=vi
 - `CH=[[inicio,fin],...]` en segundos, una entrada por parte; `TOTAL` = fin de la última.
 - `QT[i]`: un instante de la parte `i` en el que **se ven todos** sus participantes. Lo usan "Ponme a prueba", "Leer todo" y el examen.
 - `CHN`: nombres cortos para los botones.
-- `STEPS[i]={t,s,src,who:[ids],h:'<p>HTML</p>'}`: `h` contiene la explicación completa, el paso del PPT en `<p class="ppt">` y las notas o errores en `<p class="note">`.
+- `STEPS[i]={t,s,src,who:[ids],h:'<p>HTML</p>'}`: `h` contiene la explicación completa, el resumen por pasos en `<p class="ppt">En resumen, paso N de 5: …</p>` y los errores comunes en `<p class="note">`. Todo en tono neutral: sin "según el PPT", "tus apuntes" ni minutos del video.
 - `CAPS=[[t,'subtítulo'],...]`: la narración que cambia durante la animación.
 - `SUM`: un resumen de una línea por parte, para "Leer todo".
 

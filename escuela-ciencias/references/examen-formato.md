@@ -26,8 +26,8 @@ El original también tenía "Desarrolle y complete el cuadro" (10 pts): una tabl
 
 ## Contenido que revelan los exámenes
 - Los exámenes pueden **mezclar temas** (replicación + transcripción). Incluye solo el tema que se estudia, salvo que el usuario pida otro, pero usa los enunciados que tocan el tema como fuente nueva: márcalos con la etiqueta **"Examen"**.
-- Aparecen datos que no estaban en el video ni en el PPT (p53, Rb, receptor de estrógeno, unidad Svedberg). Agrégalos con la etiqueta "Examen" y di de dónde podrían venir (por ejemplo, la lectura recomendada en el PPT).
-- **Fíjate en lo que la profesora marcó como incorrecto.** En un examen, "5′ a 3′" para "dirección en que se forma la cadena de ARN" se marcó incorrecto, aunque es lo científicamente correcto. No cambies la ciencia: avísale al estudiante y sugiérele escribir ambas direcciones (molde 3′→5′, ARN 5′→3′) o preguntar. "Marca la región de inicio" como importancia de la TATA también se marcó mal: espera **quién se une y para qué**.
+- Aparecen datos que no estaban en el video ni en el PPT (p53, Rb, receptor de estrógeno, unidad Svedberg). Agrégalos al contenido como información normal; en el chat explica de dónde salen, en la app no.
+- **Fíjate en lo que la profesora marcó como incorrecto.** En un examen, "5′ a 3′" para "dirección en que se forma la cadena de ARN" se marcó incorrecto, aunque es lo científicamente correcto. No cambies la ciencia: coméntalo en el chat y, en la app, deja solo el consejo general "en un examen, escribe ambas direcciones (molde 3′→5′, ARN 5′→3′)". "Marca la región de inicio" como importancia de la TATA también se marcó mal: espera **quién se une y para qué**.
 - El estudiante pierde más puntos en preguntas de **aplicar o razonar** y en las de "importancia". Incluye muchas de esas.
 
 ## Formatos que ofrece la app
